@@ -1,2 +1,2 @@
-# personal-website-spa
-Personal website SPA.
+# personal-website
+Personal website SPA

@@ -1,0 +1,101 @@
+@import './variables.scss';
+@import './home.scss';
+
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    background: $background-color;
+
+    font-family: manjari, roboto;
+
+    // Navbar 
+    nav {
+        > .navbar-brand {
+            padding-top: .38rem !important;
+            padding-bottom: .38rem !important;
+
+            color: $primary-color;
+
+            font-weight: 700 !important;
+            font-size: 1.3em !important;
+
+            &:hover, &:active {
+                color: $primary-color;
+
+                text-decoration: inherit;
+            }
+        }
+
+        .navbar-toggler {
+            .navbar-toggler-icon{
+                background-image: url(../assets/img/hamburguer.jpeg) !important;
+
+                filter: opacity(50%);
+            }
+        }
+
+        .nav-item {
+            color: $grey-color;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+
+    // Footer
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+
+        width: 100%;
+
+        text-align: center;
+
+        .list-group-item {
+            border: none;
+            margin: 0 .2em;
+
+            background: $background-color;
+
+            a {
+                color: $grey-color;
+                text-decoration: none;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: .5rem;
+                    z-index: -1;
+                    
+                    height: 0;
+                    border: 2px solid $primary-color;
+                    border-radius: 10px;
+                    margin: 0 12px;
+                }
+
+                &:hover {
+                    color: $primary-color;
+
+                    &::before {
+                        z-index: inherit;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+/* ##Device = Most of the Smartphones Mobiles (Portrait)
+   ##Screen = B/w 320px to 479px */
+@media (min-width: 320px) and (max-width: 480px) {
+    .footer > .list-group > .list-group-item > a {
+        font-size: 10px;
+    }
+}

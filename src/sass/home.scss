@@ -1,0 +1,208 @@
+@import './variables.scss';
+
+#home-content {
+    position: relative;
+    top: 5em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    padding: 0;
+    margin: 0;
+    
+    list-style: none;
+
+    .image {
+        img {
+            border-radius: 100%;
+            border: .2em solid $primary-color;
+            width: 50%;
+            height: auto;
+            filter: brightness(0.9);
+        }
+    }
+
+    .description {
+        position: relative;
+        left: 5em;
+        top: -11.2em;
+        min-width: 16em;
+        padding: .8em;
+
+        font-size: 2.6em;
+        font-weight: 900;
+        word-spacing: .1em;
+        color: $tertiary-color;
+        background: $background-color;
+        border-radius: 50px;
+        box-shadow: 20px 20px 60px #e5e5e6, 0px 0px 60px $background-color;
+
+        
+        &::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 10%;
+            border-top: 20px solid blue;
+            border-top-color: inherit;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            color: $background-color;
+        }
+
+        .im {
+            .name {
+                visibility: initial;
+
+                &:hover {
+                    span {
+                        display: none;
+                    }
+                    content: '';
+                    &:before {
+                        content: 'Developer';
+                        transition: all .2 ease-in;
+                    }
+                }
+            }
+
+            .point {
+                position: relative;
+                top: 4px;
+            }
+
+            .notbadcode {
+                color: $primary-color;
+                border-radius: 8px;
+            }
+        }
+    }
+
+    button {
+        position: relative;
+        left: -14em;
+        top: 8em;
+
+        border-radius: 24px;
+        width: 12em;
+        background-color: $primary-color;
+        color: $background-color;
+
+        a  {
+            text-decoration: none;
+            color: $background-color;
+
+            i {
+                position: relative;
+                bottom: -3px;
+                left: 15%;
+                border-radius: 100%;
+                padding: 4px;
+            }
+        }
+
+        &:hover {
+            background-color: $secondary-color;
+
+            a {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+/* Defauult*/
+@media (min-width: 1281px) {}
+  
+  /* ##Device = Laptops, Desktops
+     ##Screen = B/w 1025px to 1280px */
+  @media (min-width: 1025px) and (max-width: 1280px) { }
+  
+  /* ##Device = Tablets, Ipads (portrait)
+     ##Screen = B/w 768px to 1024px */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    #home-content {
+        .description {
+            min-width: 14.6em;
+            font-size: 1.8em;
+            left: 4em;
+            top: -10.6em;
+        }
+
+        button {
+            left: -9em;
+        }
+    }
+  }
+  
+  /* ##Device = Tablets, Ipads (landscape)
+     ##Screen = B/w 768px to 1024px */
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    #home-content {
+        .description {
+            top: -10.6em;
+        }
+    }
+  }
+  
+  /* ##Device = Low Resolution Tablets, Mobiles (Landscape)
+     ##Screen = B/w 481px to 767px */
+  @media (min-width: 481px) and (max-width: 767px) {
+    #home-content {
+        .image {
+            display: contents;
+            .img {
+                width: 40%;
+            }
+        }
+
+        .description {
+            position: initial;
+            min-width: 15.6em;
+            font-size: 1.8em;
+            margin-top: 8px;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        button {
+            position: initial;
+            margin-top: 24px;
+        }
+    }
+  }
+  
+  /* ##Device = Most of the Smartphones Mobiles (Portrait)
+     ##Screen = B/w 320px to 479px */
+  @media (min-width: 320px) and (max-width: 480px) {
+    #home-content {
+        top: 1.5em;
+
+        .image {
+            display: contents;
+            .img {
+                width: 30%;
+            }
+        }
+
+        .description {
+            position: initial;
+            min-width: initial;
+            font-size: 1.2em;
+            margin-top: 8px;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        button {
+            position: initial;
+            margin-top: 24px;
+            width: 10em;
+            font-size: 12px;;
+        }
+    }
+  }

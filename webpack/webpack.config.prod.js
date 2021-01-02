@@ -41,6 +41,10 @@ module.exports = {
         test: /\.html$/i,
         loader: 'html-loader',
       },
+      {
+        test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/i,
+        loader: 'url-loader?limit=100000',
+      }
     ],
   },
   performance: {

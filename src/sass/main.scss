@@ -1,5 +1,6 @@
 @import './variables.scss';
 @import './home.scss';
+@import './skills.scss';
 
 body {
     box-sizing: border-box;
@@ -51,6 +52,7 @@ body {
         left: 0;
         bottom: 0;
 
+        background: $background-color;
         width: 100%;
 
         text-align: center;
@@ -64,6 +66,7 @@ body {
             a {
                 color: $grey-color;
                 text-decoration: none;
+                font-size: 2em;
 
                 &::before {
                     content: '';
@@ -96,6 +99,6 @@ body {
    ##Screen = B/w 320px to 479px */
 @media (min-width: 320px) and (max-width: 480px) {
     .footer > .list-group > .list-group-item > a {
-        font-size: 10px;
+        font-size: 1.2em;
     }
 }

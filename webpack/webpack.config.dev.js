@@ -3,9 +3,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/main.js',
+  devServer: {
+    inline: true,
+    contentBase: './app',
+    port: 8080,
+    host: '0.0.0.0'
+  },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    publicPath: '/',
+    path: __dirname + "/dist",
+    filename: "bundle.js"
   },
   plugins: [
     new HtmlWebpackPlugin({

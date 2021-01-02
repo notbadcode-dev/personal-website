@@ -1,0 +1,223 @@
+.page-title {
+    font-size: 2em;
+    color: $primary-color;
+}
+
+.skillsList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  
+    .skill-item {
+        display: inline-flex;
+        padding: 1.2em 1em 0.8em 1em;
+        margin: 0.8em 0.8em 0 0;
+        width: 20%;
+
+        align-items: center;
+        padding: 0.8em;
+        align-items: flex-end;
+
+        .icon {
+            margin: 0 .3em 0 .3em;
+            font-size: 2.5em;
+
+            &.fa-w-20 {
+                font-size: 2em !important;
+            }
+
+            &.svg {
+                width: 13%;
+                height: auto;
+                position: relative;
+                top: -0.06em;
+            }
+        }
+
+        .title {
+            font-size: 1.5em;
+            color: $grey-color;
+        }
+
+        .info-icon {
+            margin: 0 .1em 0 1.2em;
+            font-size: 1em;
+            align-self: center;
+            color: $grey-color;
+        }
+
+        &[data-background="html"] {
+            color: $html-color;
+        }
+
+        &[data-background="js"] {
+            color: $js-color;
+        }
+
+        &[data-background="css"] {
+            color: $css-color;
+        }
+
+        &[data-background="angular"] {
+            color: $angular-color;
+        }
+
+        &[data-background="vue"] {
+            color: $vue-color;
+        }
+
+        &[data-background="bootstrap"] {
+            color: $boostrap-color;
+        }
+
+        &[data-background="mongo"] {
+            color: $mongo-color;
+        }
+
+        &[data-background="express"] {
+            color: $express-color;
+        }
+
+        &[data-background="mysql"] {
+            color: $mysql-color;
+        }
+
+        &[data-background="java"] {
+            color: $java-color;
+        }
+
+        &[data-background="php"] {
+            color: $php-color;
+        }
+
+        &[data-background="git"] {
+            color: $git-color;
+        }
+
+        &[data-background="vscode"] {
+            color: $vs-color;
+        }
+
+        &[data-background="scrum"] {
+            color: $grey-color;
+        }
+
+        &[data-background="ts"] {
+            color: $ts-color;
+        }
+    }
+}
+
+/* ##Device = Tablets, Ipads (portrait)
+   ##Screen = B/w 768px to 1024px */
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .page-title {
+            font-size: 2em;
+        }
+
+        .skillsList {
+            -webkit-overflow-scrolling: auto;
+            overflow: auto;
+
+            .skill-item {
+                width: 30%;
+
+                .icon.svg {
+                    width: 20%;
+                }
+            }
+        }
+    }
+      
+    /* ##Device = Tablets, Ipads (landscape)
+       ##Screen = B/w 768px to 1024px */
+    @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+        .page-title {
+            font-size: 2em;
+        }
+
+        .skillsList {
+            -webkit-overflow-scrolling: auto;
+            overflow: auto;
+
+            .skill-item {
+                width: 20%;
+
+                .icon {
+                    &.svg {
+                        width: 20%;
+                    }
+                }
+            }
+        }
+    }
+      
+    /* ##Device = Low Resolution Tablets, Mobiles (Landscape)
+       ##Screen = B/w 481px to 767px */
+    @media (min-width: 481px) {
+        .page-title {
+            font-size: 1em;
+            margin-top: 1em;
+        }
+
+        .skillsList {
+            -webkit-overflow-scrolling: auto;
+            overflow: auto;
+            height: 360px;
+
+            .skill-item {
+                width: 22%;
+
+                .icon {
+                    font-size: 1.5em;
+
+                    &.fa-w-20 {
+                        font-size: 1.2em !important;
+                    }
+
+                    & .svg {
+                        width: 20%;
+                    }
+                }
+
+                .title {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+      
+    /* ##Device = Most of the Smartphones Mobiles (Portrait)
+       ##Screen = B/w 320px to 479px */
+    @media (min-width: 320px) and (max-width: 480px) {
+        .page-title {
+            font-size: 1em;
+            margin-top: 1em;
+        }
+
+        .skillsList {
+            --webkit-overflow-scrolling: auto;
+            overflow: auto;
+            height: 520px;
+
+            .skill-item {
+                width: 42%;
+
+                .icon {
+                    font-size: 1.2em;
+
+                    &.fa-w-20 {
+                        font-size: 1em !important;
+                    }
+
+                    &.svg {
+                        width: 50%;
+                    }
+                }
+
+                .title {
+                    font-size: 0.8em;
+                }
+            }
+        }
+    }

@@ -95,10 +95,16 @@ body {
     }
 }
 
-/* ##Device = Most of the Smartphones Mobiles (Portrait)
-   ##Screen = B/w 320px to 479px */
-@media (min-width: 320px) and (max-width: 480px) {
-    .footer > .list-group > .list-group-item > a {
-        font-size: 1.2em;
+
+@media screen and (orientation: landscape) {
+    html {
+      transform: rotate(-90deg);
+      transform-origin: left top;
+      width: 100vh;
+      height: 100vw;
+      overflow-x: hidden;
+      position: absolute;
+      top: 100%;
+      left: 0;
     }
-}
+  }

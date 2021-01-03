@@ -154,7 +154,7 @@
       
     /* ##Device = Low Resolution Tablets, Mobiles (Landscape)
        ##Screen = B/w 481px to 767px */
-    @media (min-width: 481px) {
+       @media (min-width: 481px) and (max-width: 767px) {
         .page-title {
             font-size: 1em;
             margin-top: 1em;
@@ -166,7 +166,7 @@
             height: 360px;
 
             .skill-item {
-                width: 22%;
+                width: 30%;
 
                 .icon {
                     font-size: 1.5em;

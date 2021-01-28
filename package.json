@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "fs": "0.0.1-security",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1"
   },

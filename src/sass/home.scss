@@ -1,222 +1,124 @@
 #home-content {
-    position: relative;
-    top: 5em;
     display: flex;
-    flex-flow: row wrap;
     justify-content: center;
+    align-items: center;
+    width: 100%;
 
-    padding: 0;
-    margin: 0;
-    
-    list-style: none;
+    .me {
+        border-radius: 8px;
+        margin: auto;
+        margin: 10%;
 
-    .image {
-        img {
-            border-radius: 100%;
-            border: .2em solid $primary-color;
-            width: 50%;
-            height: auto;
-            filter: brightness(0.9);
-        }
-    }
-
-    .description {
-        position: relative;
-        left: 5em;
-        top: -11.2em;
-        min-width: 16em;
-        padding: .8em;
-
-        font-size: 2.6em;
-        font-weight: 900;
-        word-spacing: .1em;
-        color: $tertiary-color;
         background: $background-color;
         border-radius: 50px;
-        box-shadow: 20px 20px 60px #e5e5e6, 0px 0px 60px $background-color;
+        box-shadow: 5px 5px 20px #e5e5e6, 0px 0px 10px $background-color;
 
-        
-        &::after {
-            content: "";
-            position: absolute;
-            top: 100%;
-            left: 10%;
-            border-top: 20px solid blue;
-            border-top-color: inherit;
-            border-left: 20px solid transparent;
-            border-right: 20px solid transparent;
-            color: $background-color;
+        .img {
+            img {
+                border-radius: 100%;
+                border: .15em solid $primary-color;
+                width: 80%;
+                height: auto;          
+                padding: 0;
+                margin: 10% 0;
+                filter: brightness(0.9);
+            }
         }
+        
+        .description {
+            font-size: 3vw;
+            font-weight: 900;
+            word-spacing: .1em;
+            color: $primary-color;
 
-        .im {
-            .name {
-                visibility: initial;
-                cursor: pointer;
+            .im {
+                .name {
+                    visibility: initial;
+                    cursor: pointer;
 
-                &:hover {
-                    span {
-                        display: none;
-                    }
+                    &:hover {
+                        span {
+                            display: none;
+                        }
 
-                    content: '';
-                    &:before {
-                        content: 'Developer';
+                        content: '';
+                        &:before {
+                            content: 'Developer';
+                        }
                     }
                 }
             }
-
-            .point {
-                position: relative;
-                top: 4px;
-            }
-
-            .notbadcode {
-                color: $primary-color;
-                border-radius: 8px;
-            }
-        }
-    }
-
-    button {
-        position: relative;
-        left: -14em;
-        top: 8em;
-
-        border-radius: 24px;
-        width: 12em;
-        background-color: $primary-color;
-        color: $background-color;
-
-        a  {
-            text-decoration: none;
-            color: $background-color;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            span {
-                padding-top: 4px;
-            }
-
-            i {
-                position: relative;
-                bottom: -3px;
-                left: 15%;
-                border-radius: 100%;
-                padding: 4px;
-            }
         }
 
-        &:hover {
-            background-color: $secondary-color;
+        .location {
+            font-size: 1.5vw;
+            font-weight: 900;
+            word-spacing: .1em;
+            color: $primary-color;
 
-            a {
-                color: $primary-color;
+            div {
+                border-radius: 100px;
+                padding: 4px 8px 0 8px;
+                text-align: center;
+                border: 1.8px solid $primary-color;
+
+                span {
+                    padding-left: 4px;
+                }
             }
         }
     }
 }
 
-/* Defauult*/
-@media (min-width: 1281px) {}
-  
-/* ##Device = Laptops, Desktops
-##Screen = B/w 1025px to 1280px */
-@media (min-width: 1025px) and (max-width: 1280px) {
+@media (min-width: 320px) and (max-width: 480px) {
     #home-content {
-        margin-top: 4em;
+        .me {
+            .img {
+                img {
+                    width: 70%;
+                }
+            }
+    
+            .description {
+                font-size: 5vw;
+                margin-bottom: 1.2em;
+                margin-left: 0.8em;
+            }
+        }
     }
 }
-  
-  /* ##Device = Tablets, Ipads (portrait)
-     ##Screen = B/w 768px to 1024px */
-  @media (min-width: 768px) and (max-width: 1024px) {
-    #home-content {
-        .description {
-            min-width: 14.6em;
-            font-size: 1.8em;
-            left: 4em;
-            top: -10.6em;
-        }
 
-        button {
-            left: -9em;
-        }
-    }
-  }
-  
-  /* ##Device = Tablets, Ipads (landscape)
-     ##Screen = B/w 768px to 1024px */
-  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width : 320px) and (max-width: 760px) and (orientation: landscape){
     #home-content {
-        .description {
-            top: -10.6em;
-        }
+        padding-top: 0;
     }
-  }
-  
-  /* ##Device = Low Resolution Tablets, Mobiles (Landscape)
-     ##Screen = B/w 481px to 767px */
-  @media (min-width: 481px) and (max-width: 767px) {
-    #home-content {
+}
 
-        .image {
-            display: contents;
+@media (min-width: 320px) and (max-width: 480px) {
+    #home-content {
+        .me {
             .img {
-                width: 40%;
+                img {
+                    width: 70%;
+                }
             }
-        }
-
-        .description {
-            position: initial;
-            min-width: 15.6em;
-            font-size: 1.8em;
-            margin-top: 8px;
-
-            &::after {
-                display: none;
+    
+            .description {
+                font-size: 5vw;
+                margin-bottom: 1.2em;
+                margin-left: 0.8em;
             }
-        }
 
-        button {
-            position: initial;
-            margin-top: 24px;
+            .location {
+                font-size: 4.4vw;
+                font-weight: 900;
+                word-spacing: .1em;
+                color: $primary-color;
+                
+                div {
+                    padding: .5em 1.2em .3em 1.2em;
+                }
+            }
         }
     }
-  }
-  
-  /* ##Device = Most of the Smartphones Mobiles (Portrait)
-     ##Screen = B/w 320px to 479px */
-  @media (min-width: 320px) and (max-width: 480px) {
-    #home-content {
-        top: 1.5em;
-
-        .image {
-            display: contents;
-            .img {
-                width: 30%;
-            }
-        }
-
-        .description {
-            position: initial;
-            min-width: initial;
-            font-size: 1.2em;
-            margin-top: 8px;
-
-            border-radius: 10px;
-
-            &::after {
-                display: none;
-            }
-        }
-
-        button {
-            position: initial;
-            margin-top: 24px;
-            width: 10em;
-            font-size: 12px;;
-        }
-    }
-  }
+}

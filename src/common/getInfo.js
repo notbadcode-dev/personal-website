@@ -73,20 +73,20 @@
             return { name: 'unknown', version: 0 };
         },
         getLocation: function () {
-            var lat = null;
-            var long = null;
-            if (navigator.geolocation) {
-               navigator.geolocation.getCurrentPosition((position)=>{
-               lat  = position.coords.latitude;
-               long = position.coords.longitude;
-                // posStatus.innerHTML='Location';
-                // locInfo.innerHTML = `Latitude: ${lat}, Longitude: ${long}`;
-                // locInfo.href = `https://www.openstreetmap.org/#map=19/${lat}  /${long}`;
-               });
+            // var lat = null;
+            // var long = null;
+            // if (navigator.geolocation) {
+            //    navigator.geolocation.getCurrentPosition((position)=>{
+            //    lat  = position.coords.latitude;
+            //    long = position.coords.longitude;
+            //     posStatus.innerHTML='Location';
+            //     locInfo.innerHTML = `Latitude: ${lat}, Longitude: ${long}`;
+            //     locInfo.href = `https://www.openstreetmap.org/#map=19/${lat}  /${long}`;
+            //    });
 
-               return { latitude: lat, longitude: long, href:  `https://www.openstreetmap.org/#map=19/${lat}  /${long}`};
+            //    return { latitude: lat, longitude: long, href:  `https://www.openstreetmap.org/#map=19/${lat}  /${long}`};
 
-            }
+            // }
          }
     };
     

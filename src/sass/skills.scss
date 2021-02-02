@@ -122,3 +122,29 @@
         }
     }
 }
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    #skills-content {
+        .container-skills {
+            min-height: 640px;
+
+            section {
+                .section-title {
+                    min-width: 7em;
+                    font-size: 1em;
+                }
+
+                .skillsList {
+                    .skill-item {
+                        font-size: 0.8em;
+                        padding-top: .8em;
+                    }
+                }
+            }
+        }
+    }
+}
